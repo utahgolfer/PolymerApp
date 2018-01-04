@@ -13,9 +13,15 @@
     "iron-pages": "PolymerElements/iron-pages#^2.0.1",
     "iron-selector": "polymerelements/iron-selector#^2.0.0",
     "paper-tabs": "PolymerElements/paper-tabs#^2.0.0",
-    "paper-styles": "PolymerElements/paper-styles#^2.0.0"
+    "paper-styles": "PolymerElements/paper-styles#^2.0.0",
+    "paper-input": "PolymerElements/paper-input#^2.0.5",
+    "paper-button": "PolymerElements/paper-button#^2.0.0"
   },
   "devDependencies": {
     "web-component-tester": "^4.3.4"
-  }
+  },
+  "homepage": "https://github.com/LssPolymerElements/InterviewHomework",
+  "description": "",
+  "main": "",
+  "license": "MIT"
 }
