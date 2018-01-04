@@ -1,0 +1,48 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer2-ts/polymer2-ts.html">
+
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+
+<dom-module id="my-form">
+	<template>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+	
+
+<div style="text-align:left">
+<h3>Your Information</h3>
+			<div class="row" style="margin-bottom:3em">
+			
+				<div class="col-md-6">			
+					<img src="../../images/cityscape.jpg" border="0" alt="" width="350px">
+				</div>
+
+				<div class="col-md-6">
+				<paper-input label="How many Employees do you have?" value="5"></paper-input>
+
+				<paper-input label="Experience modification percent?" value="10"></paper-input>
+				<paper-button raised class="indigo" on-click="handleClick">Calculate</paper-button>
+				</div>
+
+			</div>
+		</div>
+	</template>
+</dom-module>
+
+	<script>
+    // Your new element extends the Polymer.Element base class
+    class MyForm extends Polymer.Element {
+      static get is() { return 'my-form'; }
+
+	   handleClick() {
+        console.log('Ow!');
+      }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyForm.is, MyForm);
+  </script>

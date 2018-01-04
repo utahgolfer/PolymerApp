@@ -3,8 +3,14 @@
 
 <link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
-
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../routes/my-page-two.html">
 <link rel="import" href="../elements/my-calculator.html">
+<link rel="import" href="../elements/my-form.html">
+
+
 
 <dom-module id="my-page-one">
 
@@ -55,6 +61,18 @@
 					font-size: 16px;
 				}
 			}
+			.formContainer{
+				width:50%;
+				margin-left:auto;
+				margin-right:auto;
+				padding:2em;
+				text-align:center;
+				font-size:large
+			}
+			#bottom_button{
+				text-align:center;
+				margin-top:2em
+			}
 		</style>
 		<header>
 			<header-container>
@@ -67,8 +85,42 @@
 				</div>
 			</header-container>
 		</header>
+		<div id="bottom" class="formContainer">
+			<div id="p2" style="display:none">
+			<my-form></my-form>
+			</div>
+			<div id="calc" style="display:block">
+			<my-calculator></my-calculator>
+			</div>
+
+			<div id="bottom_button" style="display:block">
+				<paper-button raised class="indigo" on-click="handleClick">Recalculate</paper-button>
+				</div>
+		</div>
 
 	</template>
 
-	<script src="my-page-one.js"></script>
+	
+		<script>
+    // Your new element extends the Polymer.Element base class
+    class MyPageOne extends Polymer.Element {
+      static get is() { return 'my-page-one'; }
+
+	   handleClick() {
+        
+		var x = this.$['p2'];
+		var y = this.$['calc'];
+		var z = this.$['bottom_button'];
+
+        x.style.display = "block";
+		y.style.display = "none";
+		z.style.display = "none";
+
+		
+
+      }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyPageOne.is, MyPageOne);
+  </script>
 </dom-module>

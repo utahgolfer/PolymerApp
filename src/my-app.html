@@ -4,9 +4,12 @@
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 <link rel="import" href="../bower_components/paper-tabs/paper-tab.html">
+
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 
-<link rel="import" href="./my-page-one.html">
+<link rel="import" href="./routes/my-page-one.html">
+<link rel="import" href="./routes/my-page-two.html">
+<link rel="import" href="./routes/my-results.html">
 
 <dom-module id="my-app">
 
@@ -36,7 +39,9 @@
 		</style>
 		<iron-pages selected="[[activePage]]" attr-for-selected="name">
 			<my-page-one name="one">Page One Placeholder</my-page-one>
-			<div name="two">Page Two Placeholder</div>
+			<my-page-two name="two"></my-page-two>
+			<my-results name="results"></my-results>
+			
 			<div name="results">Results Placeholder</div>
 		</iron-pages>
 
@@ -47,6 +52,8 @@
 		</paper-tabs>
 
 	</template>
+
+
 
 	<script src="my-app.js"></script>
 </dom-module>

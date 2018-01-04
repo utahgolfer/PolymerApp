@@ -1,0 +1,29 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../bower_components/polymer2-ts/polymer2-ts.html">
+
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/paper-styles/paper-styles.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+<link rel="import" href="../../bower_components/paper-button/paper-button.html">
+
+
+<dom-module id="my-calculator">
+
+	<template>
+
+YOU COULD SAVE $225!
+(A TOTAL ESTIMATED 3-YEAR SAVINGS)
+
+
+	</template>
+	<script>
+    // Your new element extends the Polymer.Element base class
+    class MyCalculator extends Polymer.Element {
+      static get is() { return 'my-calculator'; }
+    }
+    //Now, register your new custom element so the browser can use it
+    customElements.define(MyCalculator.is, MyCalculator);
+  </script>
+
+</dom-module>
